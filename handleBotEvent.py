@@ -30,7 +30,8 @@ venues =   ["Betty's",
 
 
 def lambda_handler(data, context):
-    """Handle an incoming HTTP request from a Slack chat-bot.
+    """
+    Handle an incoming HTTP request from a Slack chat-bot.
     """
     
     if "challenge" in data:
@@ -70,8 +71,7 @@ def lambda_handler(data, context):
         #     2. The channel id of the private, direct chat (channel)
         #     3. The OAuth token required to communicate with 
         #        the API (token)
-        # Then, create an associative array and URL-encode it, 
-        # since the Slack API doesn't not handle JSON (bummer).
+        # Then, create an associative array and URL-encode it.
         data = urllib.parse.urlencode(
             (
                 ("token", BOT_TOKEN),
