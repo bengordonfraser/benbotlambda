@@ -1,4 +1,3 @@
-
 """
 Slack chat-bot Lambda handler.
 """
